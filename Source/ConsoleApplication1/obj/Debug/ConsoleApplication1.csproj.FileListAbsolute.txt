@@ -13,3 +13,10 @@ C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\bin\Debug\ConsoleApp
 C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\bin\Debug\ConsoleApplication1.XML
 C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.CodeAnalysisLog.xml
+C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.lastcodeanalysissucceeded
+C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\bin\Debug\OpenTK.dll
+C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\bin\Debug\OpenTK.xml
+C:\Users\Hemel\Source\Repos\Game\Source\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

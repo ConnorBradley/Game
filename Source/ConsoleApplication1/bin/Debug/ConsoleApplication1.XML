@@ -4,5 +4,28 @@
         <name>ConsoleApplication1</name>
     </assembly>
     <members>
+        <member name="T:ConsoleApplication1.Window">
+            <summary>
+            Represents a window.
+            </summary>
+        </member>
+        <member name="M:ConsoleApplication1.Window.#ctor(ConsoleApplication1.Game)">
+            <summary>
+            Creates and initializes a new instance of the <see cref="T:ConsoleApplication1.Window"/> class.
+            </summary>
+            <param name="game">An instance of the <see cref="T:ConsoleApplication1.Game"/> class.</param>
+        </member>
+        <member name="M:ConsoleApplication1.Window.OnUpdateFrame(OpenTK.FrameEventArgs)">
+            <summary>
+            Occurs when an update is possible.
+            </summary>
+            <param name="e">Arguments of a frame, with the time spent since the last update.</param>
+        </member>
+        <member name="M:ConsoleApplication1.Window.OnRenderFrame(OpenTK.FrameEventArgs)">
+            <summary>
+            Occurs when an render is possible.
+            </summary>
+            <param name="e">Arguments of a frame, with the time spent since the last render.</param>
+        </member>
     </members>
 </doc>

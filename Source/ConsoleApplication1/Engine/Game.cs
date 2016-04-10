@@ -1,31 +1,14 @@
-﻿using OpenTK.Graphics.OpenGL4;
+﻿using System.Collections.ObjectModel;
+using System.Drawing;
+using OpenTK.Graphics.OpenGL4;
 
 namespace ConsoleApplication1
 {
-    /// <summary>
-    /// Represents a game with an <see cref="Update(double)"/> method and a <see cref="Render(double)"/> method.
-    /// </summary>
-    public class Game
+    public class Game : Node
     {
-        /// <summary>
-        /// Updates the game.
-        /// </summary>
-        /// <param name="time">The time spent in seconds since the last call to this <see cref="Update(double)"/> method.</param>
-        public void Update(double time)
+        public Game()
         {
-            // TODO
-        }
-
-        /// <summary>
-        /// Renders the game.
-        /// </summary>
-        /// <param name="time">The time spent in seconds since the last call to this <see cref="Render(double)"/> method.</param>
-        public void Render(double time)
-        {
-            // TODO
-
-            GL.ClearColor(System.Drawing.Color.Red);
-            GL.Clear(ClearBufferMask.ColorBufferBit);
+            GameObjects.Add(new GameObject(new Background(Color.Blue)));
         }
     }
 }
