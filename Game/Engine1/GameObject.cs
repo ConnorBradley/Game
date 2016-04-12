@@ -2,13 +2,13 @@
 using System.Diagnostics;
 using OpenTK;
 
-namespace ConsoleApplication1
+namespace Game.Engine1
 {
     public class GameObject
     {
-        private ObservableCollection<Component> _components = new ObservableCollection<Component>();
+        private ObservableCollection<IComponent> _components = new ObservableCollection<IComponent>();
 
-        public GameObject(params Component[] components)
+        public GameObject(params IComponent[] components)
         {
             Debug.Assert(components != null);
 
@@ -18,7 +18,7 @@ namespace ConsoleApplication1
             }
         }
 
-        public ObservableCollection<Component> Components
+        public ObservableCollection<IComponent> Components
         {
             get { return _components; }
         }

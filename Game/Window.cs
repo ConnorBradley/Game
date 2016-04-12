@@ -1,25 +1,24 @@
-﻿using System.Diagnostics;
-using OpenTK;
+﻿using OpenTK;
 using OpenTK.Graphics.OpenGL4;
 
-namespace ConsoleApplication1
+namespace Game
 {
     /// <summary>
     /// Represents a window.
     /// </summary>
-    public sealed class Window: GameWindow
+    public sealed class Window : GameWindow
     {
-        private Game _game;
+        //private Game _game;
 
         /// <summary>
         /// Creates and initializes a new instance of the <see cref="Window"/> class.
         /// </summary>
         /// <param name="game">An instance of the <see cref="Game"/> class.</param>
-        public Window(Game game)
+        public Window()
         {
-            Debug.Assert(game != null);
+            //Debug.Assert(game != null);
 
-            _game = game;
+            //_game = game;
         }
 
         /// <summary>
@@ -30,7 +29,7 @@ namespace ConsoleApplication1
         {
             base.OnUpdateFrame(e);
 
-            _game.Update(e.Time);
+            //_game.Update(e.Time);
         }
 
         /// <summary>
@@ -44,8 +43,8 @@ namespace ConsoleApplication1
             GL.Viewport(0, 0, Width, Height);
 
             base.OnRenderFrame(e);
-            
-            _game.Render(e.Time);
+
+            //_game.Render(e.Time);
 
             SwapBuffers();
         }

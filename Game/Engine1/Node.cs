@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using OpenTK;
 
-namespace ConsoleApplication1
+namespace Game.Engine1
 {
-    public class Node:Component
+    public class Node : IComponent
     {
         private ObservableCollection<GameObject> _gameObjects = new ObservableCollection<GameObject>();
 
@@ -17,15 +12,15 @@ namespace ConsoleApplication1
             get { return _gameObjects; }
         }
 
-        public override sealed void Update(double time, Matrix4d pose)
+        public void Update(double time, Matrix4d pose)
         {
-            foreach(var gameObject in _gameObjects)
+            foreach (var gameObject in _gameObjects)
             {
                 gameObject.Update(time, pose);
             }
         }
 
-        public override sealed void Render(double time, Matrix4d pose)
+        public void Render(double time, Matrix4d pose)
         {
             foreach (var gameObject in _gameObjects)
             {

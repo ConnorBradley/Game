@@ -55,19 +55,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Engine\2D\Background.cs" />
-    <Compile Include="Engine\Component.cs" />
-    <Compile Include="Engine\Components\Node.cs" />
-    <Compile Include="Engine\Game.cs" />
-    <Compile Include="Engine\GameObject.cs" />
-    <Compile Include="Engine\Window.cs" />
+    <Compile Include="Engine1\IComponent.cs" />
+    <Compile Include="Engine1\Node.cs" />
+    <Compile Include="Engine1\GameObject.cs" />
+    <Compile Include="Engine2\IComponent.cs" />
+    <Compile Include="Engine2\GameObject.cs" />
+    <Compile Include="Window.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Engine1\ClassDiagram1.cd" />
+    <None Include="Engine2\ClassDiagram2.cd" />
+    <None Include="Engine2\SceneGraph2.md" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Engine1\SceneGraph1.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
