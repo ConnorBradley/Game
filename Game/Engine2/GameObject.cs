@@ -7,6 +7,7 @@ namespace ConsoleApplication1.Engine2
     {
         private List<IComponent> _components = new List<IComponent>();
         private List<GameObject> _gameObjects = new List<GameObject>();
+
         public List<IComponent> Components
         {
             get { return _components; }

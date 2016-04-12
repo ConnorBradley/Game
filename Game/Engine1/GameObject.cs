@@ -4,7 +4,7 @@ using OpenTK;
 
 namespace Game.Engine1
 {
-    public class GameObject
+    class GameObject
     {
         private ObservableCollection<IComponent> _components = new ObservableCollection<IComponent>();
 

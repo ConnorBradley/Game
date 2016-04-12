@@ -2,7 +2,7 @@
 
 namespace Game.Engine1
 {
-    public interface IComponent
+    interface IComponent
     {
         void Update(double time, Matrix4d pose);
 

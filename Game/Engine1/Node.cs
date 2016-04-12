@@ -3,7 +3,7 @@ using OpenTK;
 
 namespace Game.Engine1
 {
-    public class Node : IComponent
+    class Node : IComponent
     {
         private ObservableCollection<GameObject> _gameObjects = new ObservableCollection<GameObject>();
 
