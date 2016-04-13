@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Game.Engine3
+namespace Game.SceneGraph3
 {
     class GameObject
     {

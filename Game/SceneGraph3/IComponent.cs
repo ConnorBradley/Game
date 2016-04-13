@@ -1,4 +1,4 @@
-﻿namespace Game.Engine3
+﻿namespace Game.SceneGraph3
 {
     interface IComponent
     {

@@ -1,6 +1,6 @@
 ﻿using OpenTK;
 
-namespace ConsoleApplication1.Engine2
+namespace Game.SceneGraph2
 {
     interface IComponent
     {

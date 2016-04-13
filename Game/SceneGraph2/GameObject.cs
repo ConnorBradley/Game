@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using OpenTK;
 
-namespace ConsoleApplication1.Engine2
+namespace Game.SceneGraph2
 {
     class GameObject
     {

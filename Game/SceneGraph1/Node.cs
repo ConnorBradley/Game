@@ -1,9 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using OpenTK;
 
-namespace Game.Engine1
+namespace Game.SceneGraph1
 {
-    class Node : IComponent
+    class Group : IComponent
     {
         private ObservableCollection<GameObject> _gameObjects = new ObservableCollection<GameObject>();
 

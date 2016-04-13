@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using OpenTK;
 
-namespace Game.Engine1
+namespace Game.SceneGraph1
 {
     class GameObject
     {

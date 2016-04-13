@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using OpenTK;
 
-namespace Game.Engine3
+namespace Game.SceneGraph3
 {
     class Transform
     {
@@ -15,5 +15,8 @@ namespace Game.Engine3
             get;
             private set;
         } = new List<Transform>();
+
+        public Transform Parent
+        { get; set; }
     }
 }

@@ -55,30 +55,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Engine1\IComponent.cs" />
-    <Compile Include="Engine1\Node.cs" />
-    <Compile Include="Engine1\GameObject.cs" />
-    <Compile Include="Engine2\IComponent.cs" />
-    <Compile Include="Engine2\GameObject.cs" />
-    <Compile Include="Engine3\GameObject.cs" />
-    <Compile Include="Engine3\IComponent.cs" />
-    <Compile Include="Engine3\Transform.cs" />
+    <Compile Include="SceneGraph1\IComponent.cs" />
+    <Compile Include="SceneGraph1\Node.cs" />
+    <Compile Include="SceneGraph1\GameObject.cs" />
+    <Compile Include="SceneGraph2\IComponent.cs" />
+    <Compile Include="SceneGraph2\GameObject.cs" />
+    <Compile Include="SceneGraph3\GameObject.cs" />
+    <Compile Include="SceneGraph3\IComponent.cs" />
+    <Compile Include="SceneGraph3\Transform.cs" />
     <Compile Include="Window.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Engine1\ClassDiagram1.cd" />
-    <None Include="Engine2\ClassDiagram2.cd" />
-    <None Include="Engine2\SceneGraph2.md" />
-    <None Include="Engine3\ClassDiagram3.cd" />
-    <None Include="Engine3\SceneGraph3.md" />
+    <None Include="SceneGraph1\SceneGraph1.cd" />
+    <None Include="SceneGraph2\SceneGraph2.cd" />
+    <None Include="SceneGraph2\SceneGraph2.md" />
+    <None Include="SceneGraph3\SceneGraph3.cd" />
+    <None Include="SceneGraph3\SceneGraph3.md" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Engine1\SceneGraph1.md" />
+    <None Include="SceneGraph1\SceneGraph1.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
