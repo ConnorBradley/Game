@@ -5,16 +5,15 @@ namespace Game.SceneGraph1
 {
     class Group : IComponent
     {
-        private ObservableCollection<GameObject> _gameObjects = new ObservableCollection<GameObject>();
-
         public ObservableCollection<GameObject> GameObjects
         {
-            get { return _gameObjects; }
-        }
+            get;
+            private set;
+        } = new ObservableCollection<GameObject>();
 
         public void Update(double time, Matrix4d pose)
         {
-            foreach (var gameObject in _gameObjects)
+            foreach (var gameObject in GameObjects)
             {
                 gameObject.Update(time, pose);
             }
@@ -22,7 +21,7 @@ namespace Game.SceneGraph1
 
         public void Render(double time, Matrix4d pose)
         {
-            foreach (var gameObject in _gameObjects)
+            foreach (var gameObject in GameObjects)
             {
                 gameObject.Render(time, pose);
             }

@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SceneGraph1\IComponent.cs" />
-    <Compile Include="SceneGraph1\Node.cs" />
+    <Compile Include="SceneGraph1\Group.cs" />
     <Compile Include="SceneGraph1\GameObject.cs" />
     <Compile Include="SceneGraph2\IComponent.cs" />
     <Compile Include="SceneGraph2\GameObject.cs" />

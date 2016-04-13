@@ -5,18 +5,17 @@ namespace Game.SceneGraph2
 {
     class GameObject
     {
-        private List<IComponent> _components = new List<IComponent>();
-        private List<GameObject> _gameObjects = new List<GameObject>();
-
         public List<IComponent> Components
         {
-            get { return _components; }
-        }
+            get;
+            private set;
+        } = new List<IComponent>();
 
         public List<GameObject> GameObjects
         {
-            get { return _gameObjects; }
-        }
+            get;
+            private set;
+        } = new List<GameObject>();
 
         public Matrix4d Transform
         {
@@ -24,41 +23,31 @@ namespace Game.SceneGraph2
             set;
         }
 
-        public void Update(double time)
-        {
-            Update(time, Matrix4d.Identity);
-        }
-
         public void Update(double time, Matrix4d pose)
         {
             pose = pose * Transform;
 
-            foreach (var component in _components)
+            foreach (var component in Components)
             {
                 component.Update(time, pose);
             }
 
-            foreach (var gameObject in _gameObjects)
+            foreach (var gameObject in GameObjects)
             {
                 gameObject.Update(time, pose);
             }
-        }
-
-        public void Render(double time)
-        {
-            Render(time, Matrix4d.Identity);
         }
 
         public void Render(double time, Matrix4d pose)
         {
             pose = pose * Transform;
 
-            foreach (var component in _components)
+            foreach (var component in Components)
             {
                 component.Render(time, pose);
             }
 
-            foreach (var gameObject in _gameObjects)
+            foreach (var gameObject in GameObjects)
             {
                 gameObject.Render(time, pose);
             }

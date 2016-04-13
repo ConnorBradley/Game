@@ -1,26 +1,14 @@
 ﻿using System.Collections.ObjectModel;
-using System.Diagnostics;
 using OpenTK;
 
 namespace Game.SceneGraph1
 {
     class GameObject
     {
-        private ObservableCollection<IComponent> _components = new ObservableCollection<IComponent>();
-
-        public GameObject(params IComponent[] components)
-        {
-            Debug.Assert(components != null);
-
-            foreach (var component in components)
-            {
-                _components.Add(component);
-            }
-        }
-
         public ObservableCollection<IComponent> Components
         {
-            get { return _components; }
+            get;
+            private set;
         }
 
         public Matrix4d Transform
@@ -33,7 +21,7 @@ namespace Game.SceneGraph1
         {
             pose = pose * Transform;
 
-            foreach (var component in _components)
+            foreach (var component in Components)
             {
                 component.Update(time, pose);
             }
@@ -43,7 +31,7 @@ namespace Game.SceneGraph1
         {
             pose = pose * Transform;
 
-            foreach (var component in _components)
+            foreach (var component in Components)
             {
                 component.Render(time, pose);
             }
