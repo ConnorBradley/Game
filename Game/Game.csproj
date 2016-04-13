@@ -7,8 +7,8 @@
     <ProjectGuid>{531DB529-A4AF-4765-A194-BA99353D032F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
-    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <RootNamespace>Game</RootNamespace>
+    <AssemblyName>Game</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -23,7 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <DocumentationFile>bin\Debug\ConsoleApplication1.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Game.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,7 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <DocumentationFile>bin\Release\ConsoleApplication1.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Game.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -60,6 +60,9 @@
     <Compile Include="Engine1\GameObject.cs" />
     <Compile Include="Engine2\IComponent.cs" />
     <Compile Include="Engine2\GameObject.cs" />
+    <Compile Include="Engine3\GameObject.cs" />
+    <Compile Include="Engine3\IComponent.cs" />
+    <Compile Include="Engine3\Transform.cs" />
     <Compile Include="Window.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +72,8 @@
     <None Include="Engine1\ClassDiagram1.cd" />
     <None Include="Engine2\ClassDiagram2.cd" />
     <None Include="Engine2\SceneGraph2.md" />
+    <None Include="Engine3\ClassDiagram3.cd" />
+    <None Include="Engine3\SceneGraph3.md" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
