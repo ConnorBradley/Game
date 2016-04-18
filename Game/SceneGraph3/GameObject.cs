@@ -14,5 +14,18 @@ namespace Game.SceneGraph3
             get;
             private set;
         } = new List<IComponent>();
+
+        public void Update(double time)
+        {
+            foreach (var component in Components)
+            {
+                component.Update(time, Transform);
+            }
+
+            foreach (var gameObject in Transform.Children)
+            {
+                // TODO: Weird...
+            }
+        }
     }
 }

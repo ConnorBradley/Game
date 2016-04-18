@@ -2,8 +2,18 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Game.SceneGraph3.GameObject" Collapsed="true">
     <Position X="6.25" Y="1.5" Width="1.5" />
+    <AssociationLine Name="Transform" Type="Game.SceneGraph3.Transform">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.068" Y="0.404" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Components" Type="Game.SceneGraph3.IComponent">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.318" Y="0.081" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAIAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SceneGraph3\GameObject.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -15,13 +25,26 @@
   </Class>
   <Class Name="Game.SceneGraph3.Transform" Collapsed="true">
     <Position X="6.25" Y="3" Width="1.5" />
+    <Members>
+      <Property Name="Parent" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Relative" Type="OpenTK.Matrix4d">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.412" Y="0.07" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Children" Type="Game.SceneGraph3.Transform">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.104" Y="0.315" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SceneGraph3\Transform.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Parent" />
       <Property Name="Relative" />
+      <Property Name="Parent" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Children" />
@@ -30,12 +53,12 @@
   <Struct Name="OpenTK.Matrix4d" Collapsed="true">
     <Position X="3.25" Y="3" Width="1.5" />
     <TypeIdentifier />
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Struct>
   <Interface Name="Game.SceneGraph3.IComponent" Collapsed="true">
     <Position X="3.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>SceneGraph3\IComponent.cs</FileName>
     </TypeIdentifier>
   </Interface>

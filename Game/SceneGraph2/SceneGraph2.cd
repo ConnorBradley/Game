@@ -2,8 +2,23 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Game.SceneGraph2.GameObject" Collapsed="true">
     <Position X="3.5" Y="1.25" Width="1.5" />
+    <AssociationLine Name="Components" Type="Game.SceneGraph2.IComponent">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.079" Y="0.503" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="GameObjects" Type="Game.SceneGraph2.GameObject">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.26" Y="0.315" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Transform" Type="OpenTK.Matrix4d">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.324" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAQAAAAEAAAAIIAAAAAAAAQACAAAAAAAABAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAEAAAAAIAAAAAAAAQAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>SceneGraph2\GameObject.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -17,7 +32,7 @@
   <Struct Name="OpenTK.Matrix4d" Collapsed="true">
     <Position X="6.5" Y="1.25" Width="1.5" />
     <TypeIdentifier />
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Struct>
   <Interface Name="Game.SceneGraph2.IComponent" Collapsed="true">
     <Position X="3.5" Y="3" Width="1.5" />
