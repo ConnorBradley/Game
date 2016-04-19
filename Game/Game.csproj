@@ -62,9 +62,6 @@
     <Compile Include="SceneGraph2\Component.cs" />
     <Compile Include="SceneGraph2\GameObject.cs" />
     <Compile Include="SceneGraph2\Visitor.cs" />
-    <Compile Include="SceneGraph3\GameObject.cs" />
-    <Compile Include="SceneGraph3\IComponent.cs" />
-    <Compile Include="SceneGraph3\Transform.cs" />
     <Compile Include="Window.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +71,6 @@
     <None Include="SceneGraph1\SceneGraph1.cd" />
     <None Include="SceneGraph2\SceneGraph2.cd" />
     <None Include="SceneGraph2\SceneGraph2.md" />
-    <None Include="SceneGraph3\SceneGraph3.cd" />
-    <None Include="SceneGraph3\SceneGraph3.md" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
