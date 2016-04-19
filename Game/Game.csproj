@@ -55,11 +55,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SceneGraph1\IComponent.cs" />
+    <Compile Include="SceneGraph1\Component.cs" />
     <Compile Include="SceneGraph1\Group.cs" />
     <Compile Include="SceneGraph1\GameObject.cs" />
-    <Compile Include="SceneGraph2\IComponent.cs" />
+    <Compile Include="SceneGraph1\Visitor.cs" />
+    <Compile Include="SceneGraph2\Component.cs" />
     <Compile Include="SceneGraph2\GameObject.cs" />
+    <Compile Include="SceneGraph2\Visitor.cs" />
     <Compile Include="SceneGraph3\GameObject.cs" />
     <Compile Include="SceneGraph3\IComponent.cs" />
     <Compile Include="SceneGraph3\Transform.cs" />

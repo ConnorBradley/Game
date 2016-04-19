@@ -1,15 +1,14 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
 using OpenTK;
 
 namespace Game.SceneGraph1
 {
     class GameObject
     {
-        public ObservableCollection<IComponent> Components
+        public List<Component> Components
         {
             get;
-            private set;
-        }
+        } = new List<Component>();
 
         public Matrix4d Transform
         {
@@ -17,24 +16,16 @@ namespace Game.SceneGraph1
             set;
         } = Matrix4d.Identity;
 
-        public void Update(double time, Matrix4d pose)
+        public void Accept(Visitor visitor)
         {
-            pose = pose * Transform;
+            visitor.BeginVisit(this);
 
             foreach (var component in Components)
             {
-                component.Update(time, pose);
+                component.Accept(visitor);
             }
-        }
 
-        public void Render(double time, Matrix4d pose)
-        {
-            pose = pose * Transform;
-
-            foreach (var component in Components)
-            {
-                component.Render(time, pose);
-            }
+            visitor.EndVisit(this);
         }
     }
 }

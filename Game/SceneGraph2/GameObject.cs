@@ -1,20 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using OpenTK;
 
 namespace Game.SceneGraph2
 {
     class GameObject
     {
-        public List<IComponent> Components
+        public List<Component> Components
         {
             get;
-            private set;
-        } = new List<IComponent>();
+        } = new List<Component>();
 
         public List<GameObject> GameObjects
         {
             get;
-            private set;
         } = new List<GameObject>();
 
         public Matrix4d Transform
@@ -23,34 +22,23 @@ namespace Game.SceneGraph2
             set;
         }
 
-        public void Update(double time, Matrix4d pose)
+        protected internal void Accept(Visitor visitor)
         {
-            pose = pose * Transform;
+            Debug.Assert(visitor != null);
+
+            visitor.BeginVisit(this);
 
             foreach (var component in Components)
             {
-                component.Update(time, pose);
+                component.Accept(visitor);
             }
 
             foreach (var gameObject in GameObjects)
             {
-                gameObject.Update(time, pose);
-            }
-        }
-
-        public void Render(double time, Matrix4d pose)
-        {
-            pose = pose * Transform;
-
-            foreach (var component in Components)
-            {
-                component.Render(time, pose);
+                gameObject.Accept(visitor);
             }
 
-            foreach (var gameObject in GameObjects)
-            {
-                gameObject.Render(time, pose);
-            }
+            visitor.EndVisit(this);
         }
     }
 }

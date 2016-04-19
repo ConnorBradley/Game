@@ -1,9 +1,8 @@
 ﻿using System.Collections.ObjectModel;
-using OpenTK;
 
 namespace Game.SceneGraph1
 {
-    class Group : IComponent
+    class Group : Component
     {
         public ObservableCollection<GameObject> GameObjects
         {
@@ -11,20 +10,16 @@ namespace Game.SceneGraph1
             private set;
         } = new ObservableCollection<GameObject>();
 
-        public void Update(double time, Matrix4d pose)
+        public override void Accept(Visitor visitor)
         {
-            foreach (var gameObject in GameObjects)
-            {
-                gameObject.Update(time, pose);
-            }
-        }
+            visitor.BeginVisit(this);
 
-        public void Render(double time, Matrix4d pose)
-        {
             foreach (var gameObject in GameObjects)
             {
-                gameObject.Render(time, pose);
+                gameObject.Accept(visitor);
             }
+
+            visitor.EndVisit(this);
         }
     }
 }
